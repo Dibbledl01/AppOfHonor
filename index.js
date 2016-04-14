@@ -43,6 +43,17 @@ app.get("/*", function(req, res){
   res.sendFile(__dirname + "/public/index.html");
 });
 
+app.patch("/:name/tasks", function(req, res){
+  MaidOfHonor.findOne(req.params).then(function(bride){
+    maidofhonor.tasks.forEach(function(task){
+      if(task._id === req.body.task._id){
+        task = req.body.task;
+      }
+    });
+    maidofhonor.save().then(function(updatedMaidOfHonor){
+      res.json(updatedMaidOfHonor);
+  });
+});
 
 app.listen(3001, function(){
   console.log("Something's working!");
