@@ -1,21 +1,16 @@
 var express = require("express");
+var mongoose = require("./db/connection");
 var app = express();
+
+var Month = mongoose.model("Month");
 
 app.use("/", express.static("public"));
 app.use("/", express.static("bower_components"));
 
 app.get("/api/months", function(req, res){
-  res.json([
-    {name: "10-12 Months Out"},
-    {name: "6-9 Months Out"},
-    {name: "3-5 Months Out"},
-    {name: "2 Months Out"},
-    {name: "1 Month Out"},
-    {name: "2 Weeks Out"},
-    {name: "1 Week Out"},
-    {name: "Night Before"},
-    {name: "Day Of"}
-  ]);
+  Month.find().then(function(months){
+    res.json(months);
+  });
 });
 
 app.get("/*", function(req, res){
