@@ -1,15 +1,23 @@
 var express = require("express");
+var parser = require("body-parser");
 var mongoose = require("./db/connection");
 var app = express();
 
 var Month = mongoose.model("Month");
 
+app.use(parser.json({urlencoded: true}));
 app.use("/", express.static("public"));
 app.use("/", express.static("bower_components"));
 
 app.get("/api/months", function(req, res){
   Month.find().then(function(months){
     res.json(months);
+  });
+});
+
+app.post("/api/months", function(req, res){
+  Month.create(req.body).then(function(month){
+    res.json(month);
   });
 });
 

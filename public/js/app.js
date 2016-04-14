@@ -40,6 +40,11 @@
   function monthsIndexCtrl(Month){
     var vm = this;
     vm.months = Month.query();
+    vm.create = function(){
+      Month.save(vm.newMonth, function(response){
+        vm.months.push(response);
+      });
+    }
   }
 
   monthsShowCtrl.$inject = ["$stateParams"];
