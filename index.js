@@ -44,12 +44,13 @@ app.get("/*", function(req, res){
 });
 
 app.patch("/:name/tasks", function(req, res){
-  MaidOfHonor.findOne(req.params).then(function(bride){
+  MaidOfHonor.findOne(req.params).then(function(maidofhonor){
     maidofhonor.tasks.forEach(function(task){
       if(task._id === req.body.task._id){
         task = req.body.task;
       }
     });
+  });
     maidofhonor.save().then(function(updatedMaidOfHonor){
       res.json(updatedMaidOfHonor);
   });
