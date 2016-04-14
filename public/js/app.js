@@ -6,7 +6,7 @@
     "ui.router"
   ])
   .config(Router)
-  .controller("monthsIndexController", monthsIndexCtrl);
+  .controller("monthsIndexController", monthsIndexCtrl)
   .controller("monthsShowController", monthsShowCtrl);
 
   Router.$inject = ["$stateProvider", "$locationProvider", "$urlRouterProvider"];
@@ -43,8 +43,9 @@
     ];
   }
 
-  function monthsShowCtrl(){
+  monthsShowCtrl.$inject = ["$stateParams"];
+  function monthsShowCtrl($stateParams){
     var vm = this;
-    vm.month = "may";
+    vm.month = $stateParams;
   }
 })();
