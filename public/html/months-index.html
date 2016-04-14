@@ -2,6 +2,6 @@
 
 <ul>
   <li data-ng-repeat="month in mIndexVM.months">
-    {{month.name}}
+    <a data-ui-sref="monthsShow(month)">{{month.name}}</a>
   </li>
 </ul>
