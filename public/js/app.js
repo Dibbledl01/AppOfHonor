@@ -32,7 +32,7 @@
 
   monthFactory.$inject = ["$resource"];
   function monthFactory($resource){
-    var Month = $resource("/api/months");
+    var Month = $resource("/api/months/:name");
     return Month;
   }
 
@@ -47,9 +47,10 @@
     }
   }
 
-  monthsShowCtrl.$inject = ["$stateParams"];
-  function monthsShowCtrl($stateParams){
+  monthsShowCtrl.$inject = ["$stateParams", "Month"];
+  function monthsShowCtrl($stateParams, Month){
     var vm = this;
-    vm.month = $stateParams;
+    vm.month = Month.get($stateParams, function(response){
+    });
   }
 })();

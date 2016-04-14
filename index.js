@@ -15,6 +15,12 @@ app.get("/api/months", function(req, res){
   });
 });
 
+app.get("/api/months/:name", function(req, res){
+  Month.findOne(req.params).then(function(month){
+  res.json(month);  
+  });
+});
+
 app.post("/api/months", function(req, res){
   Month.create(req.body).then(function(month){
     res.json(month);
