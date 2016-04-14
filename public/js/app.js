@@ -47,10 +47,14 @@
     }
   }
 
-  monthsShowCtrl.$inject = ["$stateParams", "Month"];
-  function monthsShowCtrl($stateParams, Month){
+  monthsShowCtrl.$inject = ["$stateParams", "Month", "$state"];
+  function monthsShowCtrl($stateParams, Month, $state){
     var vm = this;
-    vm.month = Month.get($stateParams, function(response){
-    });
+    vm.month = Month.get($stateParams);
+    vm.delete = function(){
+      Month.remove($stateParams, function(){
+        $state.go("monthsIndex");
+      });
+    }
   }
 })();

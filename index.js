@@ -17,7 +17,13 @@ app.get("/api/months", function(req, res){
 
 app.get("/api/months/:name", function(req, res){
   Month.findOne(req.params).then(function(month){
-  res.json(month);  
+  res.json(month);
+  });
+});
+
+app.delete("/api/months/:name", function(req, res){
+  Month.findOneAndRemove(req.params).then(function(){
+  res.json({success: true});
   });
 });
 
