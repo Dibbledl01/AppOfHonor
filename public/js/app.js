@@ -3,9 +3,11 @@
 (function(){
   angular
   .module("appOfHonor", [
-    "ui.router"
+    "ui.router",
+    "ngResource"
   ])
   .config(Router)
+  .factory("Month", monthFactory)
   .controller("monthsIndexController", monthsIndexCtrl)
   .controller("monthsShowController", monthsShowCtrl);
 
@@ -28,19 +30,16 @@
     $urlRouterProvider.otherwise("/");
   }
 
-  function monthsIndexCtrl(){
+  monthFactory.$inject = ["$resource"];
+  function monthFactory($resource){
+    var Month = $resource("/api/months");
+    return Month;
+  }
+
+  monthsIndexCtrl.$inject = ["Month"];
+  function monthsIndexCtrl(Month){
     var vm = this;
-    vm.months = [
-      {name: "10-12 Months Out"},
-      {name: "6-9 Months Out"},
-      {name: "3-5 Months Out"},
-      {name: "2 Months Out"},
-      {name: "1 Month Out"},
-      {name: "2 Weeks Out"},
-      {name: "1 Week Out"},
-      {name: "Night Before"},
-      {name: "Day Of"}
-    ];
+    vm.months = Month.query();
   }
 
   monthsShowCtrl.$inject = ["$stateParams"];
