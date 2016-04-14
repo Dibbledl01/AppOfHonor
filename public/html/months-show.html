@@ -1,5 +1,7 @@
 <div data-ng-if="mShowVM.month.name">
   <h2>Here's what to do {{mShowVM.month.name}}</h2>
+  <input type="text" data-ng-model="mShowVM.month.name">
+  <button type="button" data-ng-click="mShowVM.month.name">Update</button>
   <button type="button" data-ng-click="mShowVM.delete()">Delete</button>
 </div>
 <div data-ng-if="!mShowVM.month.name">

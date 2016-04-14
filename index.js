@@ -27,6 +27,12 @@ app.delete("/api/months/:name", function(req, res){
   });
 });
 
+app.patch("/api/months/:name", function(req, res){
+  Month.findOneAndUpdate(req.params, req.body, {new: true}).then(function(month){
+  res.json(month);
+  });
+});
+
 app.post("/api/months", function(req, res){
   Month.create(req.body).then(function(month){
     res.json(month);

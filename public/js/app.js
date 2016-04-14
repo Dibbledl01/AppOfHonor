@@ -32,7 +32,9 @@
 
   monthFactory.$inject = ["$resource"];
   function monthFactory($resource){
-    var Month = $resource("/api/months/:name");
+    var Month = $resource("/api/months/:name", {}, {
+      update: {method: "PATCH"}
+    });
     return Month;
   }
 
@@ -54,6 +56,11 @@
     vm.delete = function(){
       Month.remove($stateParams, function(){
         $state.go("monthsIndex");
+      });
+    }
+    vm.update = function(){
+      Month.update($stateParams, vm.month, function(response){
+          $state.go("monthsShow", response);
       });
     }
   }
