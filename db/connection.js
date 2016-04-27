@@ -1,12 +1,8 @@
 var mongoose = require("mongoose");
 
-var TaskSchema = {
-  name: String
-}
 var MonthSchema = {
-  name: String,
-  tasks [TaskSchema]
-}
+  name: String
+};
 
 mongoose.model("Month", MonthSchema);
 
