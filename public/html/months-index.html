@@ -1,10 +1,12 @@
-<h2>Hey girl, you have {{mIndexVM.months.length}} lists to review!</h2>
+<div id="menu-container">
+  <h2>Hey girl, you have {{mIndexVM.months.length}} lists to review!</h2>
 
-<ul>
-  <li data-ng-repeat="month in mIndexVM.months">
-    <a data-ui-sref="monthsShow(month)">{{month.name}}</a>
-  </li>
-</ul>
+  <ul>
+    <li data-ng-repeat="month in mIndexVM.months">
+      <a data-ui-sref="monthsShow(month)">{{month.name}}</a>
+    </li>
+  </ul>
 
-<input type="text" data-ng-model="mIndexVM.newMonth.name">
-<button type="button" data-ng-click="mIndexVM.create()">Create A New List!</button>
+  <input type="text" data-ng-model="mIndexVM.newMonth.name">
+  <button type="button" data-ng-click="mIndexVM.create()">Create A New List!</button>
+</div>

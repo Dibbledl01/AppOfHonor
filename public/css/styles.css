@@ -1,15 +1,46 @@
 body {
-  justify-content: center;
+  text-align: center;
+  background-color: #FFDDDE;
+}
+
+#header-container {
+  background-image: url(http://i.imgur.com/gufNyAY.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+#header-container-decoration {
+  width: 50%;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  margin-top: 30px;
 }
 
 h1 a {
   text-decoration: none;
   font-family: "Quicksand", sans-serif;
+  font-size: 50pt;
   color: pink;
   text-align: center;
+  margin-top: 20px;
 }
 
 h1 a:hover {
   text-decoration: none;
   color: blue;
+}
+
+li {
+  text-decoration: none;
+}
+
+#menu-container {
+  width: 50%;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: inline-block;
 }
