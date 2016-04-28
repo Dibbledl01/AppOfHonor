@@ -1,11 +1,191 @@
 [
-  {"name": "10-12 Months Out"},
-  {"name": "6-9 Months Out"},
-  {"name": "3-5 Months Out"},
-  {"name": "2 Months Out"},
-  {"name": "1 Month Out"},
-  {"name": "2 Weeks Out"},
-  {"name": "1 Week Out"},
-  {"name": "Night Before"},
-  {"name": "Day Of"}
+  {
+    "name": "10-12 Months Out",
+    "lists": [
+      {
+        "tasks": [
+          {
+            "description": "She's asked you to be her Maid of Honor! Say yes and celebrate!",
+            "completed": false
+          },
+          {
+            "description": "Put together a congratulatory gift basket full of the latest wedding magazines. Your bride will love looking through them with you!",
+            "completed": false
+          },
+          {
+            "description": "Help your bride search for wedding ceremony and reception locations. She'll appreciate your support.",
+            "completed": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "6-9 Months Out",
+    "lists": [
+      {
+        "tasks": [
+          {
+            "description": "Help that girl find a dress! Do your best to be available for searching and fitting dates.",
+            "completed": false
+          },
+          {
+            "description": "Be respectful as she considers dresses for you and the other bridesmaids, but be honest about what makes you look and feel beautiful!",
+            "completed": false
+          },
+          {
+            "description": "Be open and available to helping with any engagement party tasks.",
+            "completed": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "3-5 Months Out",
+    "lists": [
+      {
+        "tasks": [
+          {
+            "description": "It's time to find you a dress! Lead that bridesmaid troupe, and make sure everyone stays focused and positive.",
+            "completed": false
+          },
+          {
+            "description": "Help your bride address invitations if need be.",
+            "completed": false
+          },
+          {
+            "description": "Spread the news about where the bride and groom are registered.",
+            "completed": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2 Months Out",
+    "lists": [
+      {
+        "tasks": [
+          {
+            "description": "2 Months tasks here.",
+            "completed": false
+          },
+          {
+            "description": "2 Months tasks here.",
+            "completed": false
+          },
+          {
+            "description": "2 Months tasks here.",
+            "completed": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "1 Month Out",
+    "lists": [
+      {
+        "tasks": [
+          {
+            "description": "1 Month Out tasks here.",
+            "completed": false
+          },
+          {
+            "description": "1 Month Out tasks here.",
+            "completed": false
+          },
+          {
+            "description": "1 Month Out tasks here.",
+            "completed": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2 Weeks Out",
+    "lists": [
+      {
+        "tasks": [
+          {
+            "description": "2 Weeks Out tasks here.",
+            "completed": false
+          },
+          {
+            "description": "2 Weeks Out tasks here.",
+            "completed": false
+          },
+          {
+            "description": "2 Weeks Out tasks here.",
+            "completed": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "1 Week Out",
+    "lists": [
+      {
+        "tasks": [
+          {
+            "description": "1 Weeks Out tasks here.",
+            "completed": false
+          },
+          {
+            "description": "1 Weeks Out tasks here.",
+            "completed": false
+          },
+          {
+            "description": "1 Weeks Out tasks here.",
+            "completed": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Night Before",
+    "lists": [
+      {
+        "tasks": [
+          {
+            "description": "Night Before tasks here.",
+            "completed": false
+          },
+          {
+            "description": "Night Before tasks here.",
+            "completed": false
+          },
+          {
+            "description": "Night Before tasks here.",
+            "completed": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Day Of",
+    "lists": [
+      {
+        "tasks": [
+          {
+            "description": "Day Of tasks here.",
+            "completed": false
+          },
+          {
+            "description": "Day Of tasks here.",
+            "completed": false
+          },
+          {
+            "description": "Day Of tasks here.",
+            "completed": false
+          }
+        ]
+      }
+    ]
+  },
 ]
